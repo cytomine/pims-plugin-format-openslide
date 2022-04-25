@@ -2,7 +2,7 @@ ARG  VERSION_NUMBER
 FROM cytomine/pims-plugin-format-openslide-dependencies:v$VERSION_NUMBER
 
 RUN pip3 install pytest
-RUN pip3 install -e /app
+RUN pip3 install /app
 
 
 COPY ./ci/app/tests /app/tests
